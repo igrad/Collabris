@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="master.cs" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Collabris</title>
+
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="styles/Master.css" rel="stylesheet" />
+
+</head>
+<body>
+    <form runat="server">
+        <div class="main">
+            <div class="sidebar">
+                <div>
+                    <img class="logo_img" src="../media/logo_400.png" />
+                </div>
+                <div class="sidebar_opt_wrapper">
+                    <div id="link_atlas" class="sidebar_link">Atlas</div>
+                    <div id="link_characters" class="sidebar_link">Characters</div>
+                    <div id="link_locations" class="sidebar_link">Locations</div>
+                    <div id="link_lore" class="sidebar_link">Lore</div>
+                    <div id="link_map" class="sidebar_link">Map</div>
+                    <div id="link_quests" class="sidebar_link">Quests</div>
+                    <!-- <div id="link_" class="sidebar_link"></div> -->
+                </div>
+                <div class="footer">
+                    <a href="">Donate</a>
+                    <br />
+                    <a href="">About</a> | <a href="">Contact Us</a>
+                    <br />
+                    &copy;<%: DateTime.Now.Year %> Ian Gradert
+                </div>
+            </div>
+
+            <div class="container body-content">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
